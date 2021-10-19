@@ -25,7 +25,7 @@ export default function Navbar() {
           <ul className="right hide-on-med-and-down">
             <li>
               <Link to="/Inicio">
-                <HomeRoundedIcon style={{ fontSize: 40}} className="valign-wrapper"/> 
+                {/* <HomeRoundedIcon style={{ fontSize: 40}} className="valign-wrapper"/>  */}
                 Inicio
               </Link>
             </li>
