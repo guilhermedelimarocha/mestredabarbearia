@@ -1,0 +1,25 @@
+.cabecalho-footer {
+    background-color: #000000 !important;
+}
+.cabecalho {
+    background-color: #000000 !important;
+    height: 8rem !important;
+    line-height: 8rem;
+}
+.logo {
+    width: 100% !important;
+    max-width: 300px;
+    padding: 10px;
+}
+.img-parallax{
+    width: 100%;
+    max-width: 1900px;
+}
+.parallax-box {
+    width: 100%;
+}
+
+@media(max-width: 570px) {
+    .logo{width: 270px !important; padding: 10px; max-width: 270px;} 
+    
+}
