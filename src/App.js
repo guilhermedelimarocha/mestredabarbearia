@@ -10,11 +10,11 @@ useEffect (() => {
   M.AutoInit();
 },[]);
   return (
-    <div>
+    <>
       <Navbar/>
       <Body/>
       <Footer/>
-    </div>
+    </>
   );
 }
 

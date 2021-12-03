@@ -2,10 +2,10 @@ import React from "react";
 import "../css/fixed.css";
 import { Link } from "react-router-dom";
 import logo from "../img/adm/branca.png";
-import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
+// import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 
 export default function Navbar() {
-  var isLoggedIn = "N";
+  var isLoggedIn = "S";
   var button;
   if (isLoggedIn === "S") {
     button = <Link to="/Conta">Conta</Link>;

@@ -13,7 +13,7 @@ export default function Body (){
     <div className="section grey darken-4">
       <div className="row container">
         <h2 className="header">Cansado do Visual ?</h2>
-        <p className="grey-text text-lighten-3">Aqui é barba, cabelo e bigode! Venha dar aquele tapa no visual e tomar aquela cervejinha gelada conversando com os amigos. Estamos abertos o dia todo prontos para te dar o melhor atendimento. </p>
+        <p className="grey-text text-lighten-3">Aqui é barba, cabelo e bigode! Venha dar aquele tapa no visual. Estamos abertos o dia todo prontos para te dar o melhor atendimento. </p>
       </div>
     </div>
     <div className="parallax-container">
