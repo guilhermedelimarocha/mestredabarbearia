@@ -12,6 +12,7 @@ useEffect (() => {
   return (
     <>
       <Navbar/>
+      
       <Body/>
       <Footer/>
     </>
