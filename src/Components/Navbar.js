@@ -2,10 +2,19 @@ import React from "react";
 import "../css/fixed.css";
 import { Link } from "react-router-dom";
 import logo from "../img/adm/branca.png";
+import 'materialize-css/dist/css/materialize.min.css'
 // import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 
 export default function Navbar() {
-  var isLoggedIn = "S";
+  var isADM = "S";
+  var buttonFinanceiro;
+  if (isADM === "S"){
+    buttonFinanceiro = <Link to="/Financeiro">Financeiro</Link>
+  }
+  else {
+    buttonFinanceiro = "";
+  }
+  var isLoggedIn = "N";
   var button;
   if (isLoggedIn === "S") {
     button = <Link to="/Conta">Conta</Link>;
@@ -22,7 +31,7 @@ export default function Navbar() {
           <a href="#!" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
           </a>
-          <ul className="right hide-on-med-and-down">
+          <ul className="right hide-on-med-and-down lista-cabecalho">
             <li>
               <Link to="/Inicio">
                 {/* <HomeRoundedIcon style={{ fontSize: 40}} className="valign-wrapper"/>  */}
@@ -35,10 +44,11 @@ export default function Navbar() {
             <li>
               <Link to="/Horarios">Horarios</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/Agendamentos">Agendamentos</Link>
-            </li>
+            </li> */}
             <li>{button}</li>
+            <li>{buttonFinanceiro}</li>
           </ul>
         </div>
       </nav>

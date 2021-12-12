@@ -1,6 +1,7 @@
 import React  from 'react';
 // import '../css/footer.css';
 import '../css/fixed.css';
+import 'materialize-css/dist/css/materialize.min.css'
 import '../css/icons.css';
 import instagram from '../icons/system/instagram.png';
 import linkedin from '../icons/system/linkedin.png';

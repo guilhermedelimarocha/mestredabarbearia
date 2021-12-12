@@ -1,0 +1,29 @@
+.card-valor {
+  margin-top: 30px;
+  padding: 40px !important;
+  color: rgb(0, 0, 0) !important;
+  text-align: center !important;
+  border-radius: 10px;
+  background: linear-gradient(40deg,rgb(179, 174, 174), rgb(87, 85, 85) 50%, rgb(171, 172, 171)) !important;
+}
+.card-valor .title {
+  font-size: 18px !important;
+  font-weight: 700;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.822);
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: -25px;
+  color: #fff;
+}
+.card-valor .valores {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+    margin-top: 30px !important;
+}
+.card-valor .valores .cifao {
+  font-size: inherit;
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+  font-weight: bold;
+}
