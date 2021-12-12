@@ -4,6 +4,9 @@
 .cabecalho {
     background-color: #000000 !important;
     height: 8rem !important;
+    line-height: 0px !important;
+}
+.cabecalho .lista-cabecalho{
     line-height: 8rem;
 }
 .logo {
