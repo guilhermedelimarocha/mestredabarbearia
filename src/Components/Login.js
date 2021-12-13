@@ -3,6 +3,8 @@ import axios from "axios";
 import { Send } from '@mui/icons-material';
 import {Link} from 'react-router-dom';
 import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
+import $ from 'jquery';
+import Cookies from 'js-cookie';
 
 import "../css/login.css";
 
@@ -20,9 +22,27 @@ class Login extends React.Component {
       .post("localhost:8080/login", {
         email: this.state.email,
         senha: this.state.senha,
+        
       })
-      .then((response) => {
-        console.log(response);
+      .then(() => {
+        var nivel = 3;
+        this.setState({ mensagem: "Logado com Sucesso !" });
+        console.log("Deu bom.");
+        $("#mensagem").removeClass("hide");
+        $("#mensagem").addClass("show sucesso");
+
+        Cookies.set("IsLoggedIn", "S");
+
+        if(nivel === 1){
+          Cookies.set("isADM", "S");
+        }
+        else{
+          Cookies.set("isADM", "N");
+        }
+
+        setTimeout(function() {
+          window.location.href = '/Inicio';
+      }, 5000);
       })
       .catch((erro) => {
         this.setState({ mensagemErro: erro.response.data });
@@ -72,13 +92,13 @@ class Login extends React.Component {
                   />
                 </div>
                 <div className="col s6 l6 right">
-                  <button
+                  <div
                     onClick={this.ValidaLogin}
                     className="btn green right waves-effect buttons-login"
                   >
                     <Send className="right tiny icons-button"/>
                     Logar
-                  </button>
+                  </div>
                 </div>
                 <div className="col s6 l6 left">
                   <Link to="/Cadastrar" className="btn red darken-2 left buttons-login">

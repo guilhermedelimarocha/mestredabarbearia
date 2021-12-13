@@ -9,7 +9,7 @@ import Conta from './Components/Conta';
 import Cadastrar from './Components/Cadastrar';
 import { BrowserRouter, Switch, Route } from 'react-router-dom' // importando o BrowserRouter do pacote que acabamos de instalar
 // import 'materialize-css/dist/css/materialize.min.css'
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -25,4 +25,4 @@ ReactDOM.render(
   </BrowserRouter>,    
   document.getElementById('root')
 );
-// registerServiceWorker();
+registerServiceWorker();

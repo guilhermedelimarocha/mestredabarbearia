@@ -3,6 +3,9 @@ import '../css/horario.css';
 import React, { Component } from 'react';
 import moment from 'moment';
 import { ReactAgenda , ReactAgendaCtrl, guid, Modal } from 'react-agenda';
+import { HomeRounded } from "@mui/icons-material";
+
+// import 'materialize-css';
 
 var now = new Date();
 
@@ -81,6 +84,7 @@ this.state = {
   startDate: new Date()
 }
 this.handleRangeSelection = this.handleRangeSelection.bind(this)
+this.home = this.home.bind(this)
 this.handleItemEdit = this.handleItemEdit.bind(this)
 this.zoomIn = this.zoomIn.bind(this)
 this.zoomOut = this.zoomOut.bind(this)
@@ -126,7 +130,9 @@ componentWillReceiveProps(next , last){
        this.setState({selected:[item] })
 
   }
-
+  home(){
+      window.location.href="/Inicio";
+      }
   zoomIn(){
 var num = this.state.cellHeight + 15
     this.setState({cellHeight:num})
@@ -204,6 +210,7 @@ this.setState({numberOfDays:days})
       <div className="content-expanded ">
 
         <div className="control-buttons">
+        <button  className="button-control" onClick={this.home}> <HomeRounded/> </button>
           <button  className="button-control" onClick={this.zoomIn}> <i className="zoom-plus-icon"></i> </button>
           <button  className="button-control" onClick={this.zoomOut}> <i className="zoom-minus-icon"></i> </button>
           <button  className="button-control" onClick={this._openModal}> <i className="schedule-icon"></i> </button>

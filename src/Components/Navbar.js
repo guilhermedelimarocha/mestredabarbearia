@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../img/adm/branca.png";
 import 'materialize-css/dist/css/materialize.min.css'
 // import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
+import Cookies from 'js-cookie'
 
 export default function Navbar() {
   var isADM = "S";
@@ -14,7 +15,7 @@ export default function Navbar() {
   else {
     buttonFinanceiro = "";
   }
-  var isLoggedIn = "N";
+  var isLoggedIn = Cookies.get("IsLoggedIn");
   var button;
   if (isLoggedIn === "S") {
     button = <Link to="/Conta">Conta</Link>;
@@ -44,11 +45,11 @@ export default function Navbar() {
             <li>
               <Link to="/Horarios">Horarios</Link>
             </li>
+            <li>{buttonFinanceiro}</li>
             {/* <li>
               <Link to="/Agendamentos">Agendamentos</Link>
             </li> */}
             <li>{button}</li>
-            <li>{buttonFinanceiro}</li>
           </ul>
         </div>
       </nav>
