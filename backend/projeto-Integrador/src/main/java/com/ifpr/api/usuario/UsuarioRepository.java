@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public interface UsuarioRepository extends JpaRepository<UsuarioEntity, Long>{
 	
-    
+    @Transactional(readOnly=true)
+	List<UsuarioEntity> findByEmailAndSenha(String email, String senha);
 
 }

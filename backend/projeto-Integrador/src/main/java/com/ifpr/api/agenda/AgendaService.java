@@ -17,19 +17,19 @@ import javassist.NotFoundException;
 @Service
 public class AgendaService {
 
-	private final AgendaRepository agendaRepository;
-
 	@Autowired
-	public AgendaService(AgendaRepository agendaRepository) {
-		this.agendaRepository = agendaRepository;
-	}
+	private AgendaRepository agendaRepository;
+
+	
+	// public AgendaService(AgendaRepository agendaRepository) {
+	// 	this.agendaRepository = agendaRepository;
+	// }
 
 	public Long save(AgendaEntity agendaEntity) {
 
-		
 		agendaEntity = agendaRepository.save(agendaEntity);
-
 		return agendaEntity.getId();
+
 	}
 
 	public List<AgendaEntity> findAll(){

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author Ilson Junior
@@ -41,15 +42,9 @@ public class UsuarioController {
         return ResponseEntity.ok().body(usuarioService.findAll());
     }
 
-	// @GetMapping("/node/{parentId}")
-    // public ResponseEntity<List<NoDTO>> findByParentId(@PathVariable("parentId") Long parentId) {
-    //     return ResponseEntity.ok().body(usuarioService.findByParentId(parentId));
-    // }
-	
-	// @DeleteMapping("/node/{id}")
-    // public ResponseEntity<String> delete(@PathVariable("id") Long id) throws NotFoundException {
-	// 	noService.delete(id);
-    //     return ResponseEntity.ok("Deleted");
-    // }
+    @GetMapping("/usuarioES")
+    public ResponseEntity<List<UsuarioEntity>> findByEmailAndSenha(@RequestParam("email") String email, @RequestParam("senha") String senha) {
+        return ResponseEntity.ok().body(usuarioService.findByEmailAndSenha(email, senha));
+    }
 
 }

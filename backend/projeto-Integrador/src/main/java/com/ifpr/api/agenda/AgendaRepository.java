@@ -15,7 +15,5 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface AgendaRepository extends JpaRepository<AgendaEntity, Long>{
-	
-    
 
 }

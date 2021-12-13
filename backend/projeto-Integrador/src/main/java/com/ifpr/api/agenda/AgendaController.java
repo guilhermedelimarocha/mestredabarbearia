@@ -30,7 +30,6 @@ public class AgendaController {
 	@PostMapping("/agenda")
     public ResponseEntity<Long> save(@RequestBody AgendaEntity agendaEntity) {
 		return ResponseEntity.ok().body(agendaService.save(agendaEntity));
-
     }
 
 	@PutMapping("/agenda")
@@ -43,10 +42,6 @@ public class AgendaController {
         return ResponseEntity.ok().body(agendaService.findAll());
     }
 
-	// @GetMapping("/node/{parentId}")
-    // public ResponseEntity<List<NoDTO>> findByParentId(@PathVariable("parentId") Long parentId) {
-    //     return ResponseEntity.ok().body(agendaService.findByParentId(parentId));
-    // }
 	
 	@DeleteMapping("/agenda/{id}")
     public ResponseEntity<String> delete(@PathVariable("id") Long id) throws NotFoundException {

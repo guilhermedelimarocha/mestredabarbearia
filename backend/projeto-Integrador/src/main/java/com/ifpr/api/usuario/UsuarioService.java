@@ -34,5 +34,8 @@ public class UsuarioService {
 		return usuarioRepository.findAll();
 	}
 
+	public List<UsuarioEntity> findByEmailAndSenha(String email, String senha) {
+		return usuarioRepository.findByEmailAndSenha(email, senha);
+	}
 
 }
