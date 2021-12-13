@@ -21,7 +21,7 @@ import com.ifpr.api.usuario.UsuarioEntity;
 
 /**
  * @author Ilson Junior
- * @since 12/08/2019
+ * @since 05/12/2021
  */
 
 @Entity

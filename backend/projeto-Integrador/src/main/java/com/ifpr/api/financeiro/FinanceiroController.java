@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Ilson Junior
- * @since 12/08/2019
+ * @since 05/12/2021
  */
 
 @RestController
@@ -40,16 +40,5 @@ public class FinanceiroController {
     public ResponseEntity<List<FinanceiroEntity>> findByParentId() {
         return ResponseEntity.ok().body(financeiroService.findAll());
     }
-
-	// @GetMapping("/node/{parentId}")
-    // public ResponseEntity<List<NoDTO>> findByParentId(@PathVariable("parentId") Long parentId) {
-    //     return ResponseEntity.ok().body(financeiroService.findByParentId(parentId));
-    // }
-	
-	// @DeleteMapping("/node/{id}")
-    // public ResponseEntity<String> delete(@PathVariable("id") Long id) throws NotFoundException {
-	// 	noService.delete(id);
-    //     return ResponseEntity.ok("Deleted");
-    // }
 
 }

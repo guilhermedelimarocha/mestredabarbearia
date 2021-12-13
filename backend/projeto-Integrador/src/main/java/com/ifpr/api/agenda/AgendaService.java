@@ -11,7 +11,7 @@ import javassist.NotFoundException;
 
 /**
  * @author Ilson Junior
- * @since 12/08/2019
+ * @since 05/12/2021
  */
 
 @Service
@@ -19,11 +19,6 @@ public class AgendaService {
 
 	@Autowired
 	private AgendaRepository agendaRepository;
-
-	
-	// public AgendaService(AgendaRepository agendaRepository) {
-	// 	this.agendaRepository = agendaRepository;
-	// }
 
 	public Long save(AgendaEntity agendaEntity) {
 

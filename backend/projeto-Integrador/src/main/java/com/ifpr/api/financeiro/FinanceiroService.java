@@ -9,7 +9,7 @@ import org.springframework.util.Assert;
 
 /**
  * @author Ilson Junior
- * @since 12/08/2019
+ * @since 05/12/2021
  */
 
 @Service
@@ -33,6 +33,5 @@ public class FinanceiroService {
 	public List<FinanceiroEntity> findAll(){
 		return financeiroRepository.findAll();
 	}
-
 
 }
